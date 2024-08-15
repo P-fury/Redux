@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta content="ie=edge" http-equiv="X-UA-Compatible"/>
     <title>Redux - Zadania</title>
     <script src="https://fer-api.coderslab.pl/bootstrap/js/index.js"></script>
     <script>
-      new CL({
-        title: "Redux",
-        path: ["Implementacja", "Zadanie"],
-      });
+        new CL({
+            title: "Redux",
+            path: ["Implementacja", "Zadanie"],
+        });
     </script>
-  </head>
-  <body>
-    <div id="app" class="container"></div>
+</head>
+<body>
+<div id="app" class="container">
 
-    <script src="build/out.js"></script>
-  </body>
+    <h1>Stan konta: <span class="balance">0</span></h1>
+    <hr/>
+    <input class="amount" type="number" placeholder="Amount"/>
+    <button class="deposit">Wplac</button>
+    <button
+            class="withdraw">Wyplac
+    </button>
+    <button class="reset">Reset</button>
+
+
+</div>
+
+<script src="build/out.js"></script>
+</body>
 </html>
