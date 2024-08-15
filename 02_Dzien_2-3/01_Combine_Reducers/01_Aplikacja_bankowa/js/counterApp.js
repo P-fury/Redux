@@ -9,11 +9,11 @@ export default function () {
     console.log(`from subscribe ${getState()}`);
   });
 
-  dispatch(increment(5));
-  dispatch(decrement(2));
+   dispatch(increment(5));
+   dispatch(decrement(2));
 
-  unsubscribe();
+   unsubscribe();
 
-  dispatch(decrement(2));
-  console.log(getState());
+   dispatch(decrement(2));
+   console.log(getState());
 }

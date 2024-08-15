@@ -1,11 +1,15 @@
 // Tu powinny się znaleźć odpowiednie importy
+import {createStore} from  "redux"
+
+import {depositMoney, withdrawMoney} from "./redux/actions/bankActions";
+import rootReducer from "./redux";
 
 const bankApp = {
 
   start(rootElement) {
     this.createUI(rootElement);
-    this.createStore();
     this.collectRefs();
+    this.createStore();
     this.applyHandlers();
   },
 
@@ -40,6 +44,12 @@ const bankApp = {
   // zamienić wartość tekstu w elemencie `saldoEl` na wartość ze store + PLN
   // np. this.saldoEl.innerText = `wartosc-ze-store PLN`
   createStore() {
+    this.store = createStore(rootReducer);
+    this.saldoEl.innerText = `${this.store.getState().balance} PLN`;
+    this.store.subscribe(() => {
+      const currentState = this.store.getState().balance;
+      this.saldoEl.innerText = `${currentState} PLN`;
+    })
 
   },
 
@@ -49,6 +59,20 @@ const bankApp = {
   // this.withdrawEl
   // this.depositEl
   applyHandlers() {
+    this.depositEl.addEventListener("click", (e) => {
+      const amount = parseFloat(this.inputEl.value) || 0;
+      if (amount > 0){
+        this.store.dispatch(depositMoney(amount))
+
+      }
+    })
+    this.withdrawEl.addEventListener("click", (e) => {
+      const amount = parseFloat(this.inputEl.value) || 0;
+      if (amount > 0){
+        this.store.dispatch(withdrawMoney(amount))
+      }
+    })
+
 
   }
 };

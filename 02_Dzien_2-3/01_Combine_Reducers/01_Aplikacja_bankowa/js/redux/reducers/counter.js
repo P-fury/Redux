@@ -1,18 +1,21 @@
 import {INCREMENT, DECREMENT} from "../actions/counterActions";
 
-const initialState = 0;
+const initialState = 0
+;
 
 function counterReducer(state = initialState, {type, payload}) {
   switch (type) {
     case INCREMENT:
-      return state + payload;
+      return state + (payload || 0);
 
     case DECREMENT:
-      return state - payload;
+      if (state < payload) {
+        return state;
+      }
+      return state - (payload || 0);
 
     default:
       return state;
   }
 }
-
 export default counterReducer;
