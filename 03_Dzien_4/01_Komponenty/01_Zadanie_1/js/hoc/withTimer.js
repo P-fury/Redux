@@ -60,8 +60,8 @@ export default function withTimer(Component) {
 
         }, [isCounting]);
 
-    return(
-        <Component {...props} counter={counter} startTimer={startTimer} stopTimer={stopTimer} />
-    )
+        return (
+            <Component {...props} counter={counter} startTimer={startTimer} stopTimer={stopTimer}/>
+        )
     }
 }
