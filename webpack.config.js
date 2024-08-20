@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "02_Dzien_2-3/01_Combine_Reducers/01_Aplikacja_bankowa";
+const entryPath = "03_Dzien_4/01_Komponenty/01_Zadanie_1";
 
 module.exports = {
   mode: "none",
