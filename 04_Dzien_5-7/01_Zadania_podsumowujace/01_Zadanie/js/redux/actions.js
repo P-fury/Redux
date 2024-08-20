@@ -5,6 +5,8 @@
 
 const INCREMENT = 'INCREMENT';
 const DECREMENT = 'DECREMENT';
+const ADD_PRODUCTS = 'ADD_PRODUCTS';
+const CHANGE_ORDER = 'CHANGE_ORDER';
 
 const increment = () => ({
     type: INCREMENT,
@@ -18,4 +20,15 @@ const decrement = () => ({
 })
 
 
-export {INCREMENT, increment, DECREMENT, decrement}
+const addProducts = (product) => ({
+    type: ADD_PRODUCTS,
+    product,
+})
+
+const changeOrder = (index, direction) => ({
+    type: CHANGE_ORDER,
+    index,
+    direction
+})
+
+export {INCREMENT, increment, DECREMENT, decrement, ADD_PRODUCTS, addProducts, CHANGE_ORDER, changeOrder};
