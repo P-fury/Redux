@@ -1,12 +1,13 @@
 import {combineReducers} from 'redux';
+import {QUOTE_FETCHING,QUOTE_FETCHED,QUOTE_ERROR} from "./actions";
 
 const initialState = {
     loading: false,
     error: "",
     quote: null
 }
-const quote = (state = initialState, action) => {
-    switch (action.type) {
+const quote = (state = initialState, {type, payload}) => {
+    switch (type) {
         case QUOTE_FETCHING: {
             return {
                 ...state,
@@ -17,7 +18,7 @@ const quote = (state = initialState, action) => {
             return{
                 ...state,
                 loading: false,
-                quote: action.payload
+                quote: payload
 
             }
         }
@@ -25,11 +26,11 @@ const quote = (state = initialState, action) => {
             return{
                 ...state,
                 loading: false,
-                error: action.payload
+                error: payload
             }
         }
         default:
-            return state; // Zwróć niezmieniony stan w przypadku innych akcji
+            return state;
     }
 };
 
