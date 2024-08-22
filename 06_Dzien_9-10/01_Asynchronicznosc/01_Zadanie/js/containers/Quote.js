@@ -1,17 +1,18 @@
 import React from "react";
 import {connect} from "react-redux";
 import Quote from "../components/Quote";
-import {fetchQuote} from "../redux/actions";
+import {addToFav, fetchQuote} from "../redux/actions";
 // {quote, loading, error, fetchQuote}
 
-const mapState = (state)=>({
+const mapState = (state) => ({
     quote: state.quote.quote,
     loading: state.quote.loading,
     error: state.quote.error,
 });
 
-const mapDispatch = (dispatch)=>({
-    fetchQuote:()=>dispatch(fetchQuote())
+const mapDispatch = (dispatch) => ({
+    fetchQuote: () => dispatch(fetchQuote()),
+    addToFav: (quote) => dispatch(addToFav(quote))
 });
 
 

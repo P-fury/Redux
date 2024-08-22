@@ -4,6 +4,7 @@ import API from '../api';
 const QUOTE_FETCHING = 'QUOTE_FETCHING';
 const QUOTE_FETCHED = 'QUOTE_FETCHED';
 const QUOTE_ERROR = 'QUOTE_ERROR';
+const ADD_FAV = 'ADD_FAV'
 
 const fetchQuote = () =>(dispatch) => {
     dispatch(startFetching());
@@ -26,7 +27,12 @@ const quoteFetched = (quote) => ({
 const quoteError = (error) => ({
     type: QUOTE_ERROR,
     payload: error
+
+
 });
+const addToFav = (quote) =>({
+    type: ADD_FAV,
+    payload: quote
+})
 
-
-export {QUOTE_FETCHING, QUOTE_FETCHED, QUOTE_ERROR, startFetching, quoteFetched, quoteError, fetchQuote};
+export {QUOTE_FETCHING, QUOTE_FETCHED, QUOTE_ERROR,ADD_FAV, startFetching, quoteFetched, quoteError, fetchQuote, addToFav};
