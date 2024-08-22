@@ -1,8 +1,10 @@
 import React from "react";
 
-const ArticlesList = ({articles = []}) => (
+
+
+const ArticlesList = ({articles = [], onArticleDelete}) => (
   <ol>
-    {articles.map((title) => <li key={title}>{title}</li>)}
+    {articles.map((article) => <li key={article.title}>{article.title}<button onClick={()=>onArticleDelete(article)}>delete</button></li>)}
   </ol>
 );
 
