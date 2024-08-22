@@ -1,7 +1,7 @@
 const path = require("path");
 const webpack = require("webpack");
 
-const entryPath = "05_Dzien_8/01_Polaczenie_z_React/01_Zadanie";
+const entryPath = "06_Dzien_9-10/01_Asynchronicznosc/01_Zadanie";
 
 module.exports = {
   mode: "none",
