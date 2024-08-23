@@ -1,6 +1,6 @@
 import React from "react";
 
-const imgSrc = "https://www.raletta.in/images/rocket.gif";
+const imgSrc = "https://i.pinimg.com/originals/bc/70/cf/bc70cf7803b64dc93def87bdf49ceacf.gif";
 
 const Rocket = ({ isLaunched }) =>
   <img
