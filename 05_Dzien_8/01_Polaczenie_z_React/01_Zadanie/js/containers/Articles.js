@@ -1,10 +1,12 @@
 import {connect} from 'react-redux';
 import Articles from '../components/Articles';
 import {addArticle, deleteArticle} from '../redux/actions';
+import { userArticlesSelector } from '../redux/selectors';
 
-const mapStateToProps = (state) => ({
+
+const mapStateToProps = (state, ownProps) => ({
     users: state.users,
-    articles: state.articles
+    articles: userArticlesSelector(state, ownProps.user)
 });
 
 const mapDispatchToProps = (dispatch) => ({
