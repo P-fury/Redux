@@ -10,7 +10,7 @@ const fakeProducts = [
     { id: 7, name: "Przyprawa curry" },
     { id: 8, name: "Olej" },
     { id: 9, name: "Wołowina 500g" },
-    { id: 10, name: "Ziemniaki" },
+    { id: 10, name: "Buraki" },
 ];
 
 const addProduct = (state = fakeProducts ,{type,payload}) => {

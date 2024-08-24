@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 import store from '../redux/store'
 // TODO: components => containers
-import Home from './Home'
-import Products from '../components/Products'
-import AddProduct from "../components/Products/Add";
+import Home from '../containers/Home'
+import Products from '../containers/Products'
+import AddProduct from "../containers/Products/Add";
 import Layout from "./Layout";
 
 
