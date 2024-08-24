@@ -1,6 +1,6 @@
 import React from "react";
 import Panel from "../Panel";
-
+// TODO: REPALCE WITH PRODUCT FROM STORE
 const fakeProducts = [
   { id: 1, name: "Pomidory" },
   { id: 2, name: "Przyprawa curry" },
