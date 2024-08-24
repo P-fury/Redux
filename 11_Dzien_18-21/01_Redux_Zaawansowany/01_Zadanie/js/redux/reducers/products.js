@@ -1,7 +1,7 @@
 import {ADD_PRODUCT} from "../actions/products";
 
 const fakeProducts = [
-    { id: 1, name: "Pomidory" },
+    { id: 1, name: "Pssomidory" },
     { id: 2, name: "Przyprawa curry" },
     { id: 3, name: "Olej" },
     { id: 4, name: "Wołowina 500g" },
@@ -9,7 +9,7 @@ const fakeProducts = [
     { id: 6, name: "Pomidory" },
     { id: 7, name: "Przyprawa curry" },
     { id: 8, name: "Olej" },
-    { id: 9, name: "Wołowina 500g" },
+    { id: 9, name: "Wołowina 666g" },
     { id: 10, name: "Buraki" },
 ];
 

@@ -9,7 +9,7 @@ const fakeProducts = [
   {id: 5, name: "Ziemniaki"}
 ];
 
-const SingleProduct = ({id, index, number, onChange, onClose}) => {
+const SingleProduct = ({id, index, number, onChange, onClose,products}) => {
   return (
     <article className="message is-dark">
       <div className="message-header">
@@ -22,8 +22,8 @@ const SingleProduct = ({id, index, number, onChange, onClose}) => {
                 <span className="select">
                   <select onChange={(e) => onChange(index, e.target.value)} value={id}>
                     <option>Wybierz...</option>
-                    {fakeProducts.map(product => (
-                      <option value={product.id}>{product.name}</option>
+                    {products.map(product => (
+                      <option key={product.id} value={product.id}>{product.name}</option>
                     ))}
                   </select>
                 </span>
